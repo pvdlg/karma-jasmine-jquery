@@ -1,5 +1,7 @@
 # **karma-jasmine-jquery**
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/karma-jasmine-jquery.svg)](https://greenkeeper.io/)
+
 A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 
 [![Travis](https://img.shields.io/travis/vanduynslagerp/karma-jasmine-jquery.svg)](https://travis-ci.org/vanduynslagerp/karma-jasmine-jquery)
