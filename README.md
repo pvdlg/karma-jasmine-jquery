@@ -1,7 +1,5 @@
 # **karma-jasmine-jquery**
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/karma-jasmine-jquery.svg)](https://greenkeeper.io/)
-
 A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 
 [![Travis](https://img.shields.io/travis/vanduynslagerp/karma-jasmine-jquery.svg)](https://travis-ci.org/vanduynslagerp/karma-jasmine-jquery)
@@ -12,6 +10,7 @@ A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 
 [![npm](https://img.shields.io/npm/v/@metahub/karma-jasmine-jquery.svg)](https://www.npmjs.com/package/@metahub/karma-jasmine-jquery)
 [![npm](https://img.shields.io/npm/dt/@metahub/karma-jasmine-jquery.svg)](https://www.npmjs.com/package/@metahub/karma-jasmine-jquery)
+[![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/karma-jasmine-jquery.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/vanduynslagerp/karma-jasmine-jquery.svg)](https://github.com/vanduynslagerp/karma-jasmine-jquery/blob/master/LICENSE)
 
 ## Installation
