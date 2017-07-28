@@ -55,6 +55,7 @@ export default function run(fixtures, frameworks) {
     }),
     () => 0
   );
+  /* eslint-disable unicorn/catch-error-name */
   const promise = pEvent(server, 'run_complete', {multiArgs: true, rejectionEvents: ['browser_error']})
     .then(result => result[1])
     .catch(result => {
@@ -63,6 +64,7 @@ export default function run(fixtures, frameworks) {
       return {success, failed, error, disconnected, exitCode: 1, errMsg: result[1]};
     });
 
+  /* eslint-enable unicorn/catch-error-name */
   server.start();
   return promise;
 }

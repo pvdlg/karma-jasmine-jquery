@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 import test from 'ava';
-import run from './helpers/run';
+import run from './helpers/karma';
 
 test('Jasmine-JQuery should be loaded', async t => {
   const fixture = 'test/fixtures/jasmine-jquery.test.js';
