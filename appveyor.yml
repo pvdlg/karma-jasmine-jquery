@@ -2,14 +2,14 @@ version: '{build}'
 environment:
   matrix:
     - nodejs_version: '4'
-    - nodejs_version: '7'
+    - nodejs_version: '8'
 branches:
   only:
     - master
     - /^greenkeeper.*$/
 install:
   - ps: Install-Product node $env:nodejs_version
-  - IF %nodejs_version% LSS 5 npm -g install npm@3
+  - IF %nodejs_version% LSS 5 npm -g install npm@5
   - npm install
 platform:
   - x86
