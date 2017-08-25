@@ -75,6 +75,11 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
+  "nyc": {
+    "include": [
+      "lib/*.js"
+    ]
+  },
   "peerDependencies": {
     "jasmine-core": "*",
     "jasmine-jquery": "*",
