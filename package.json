@@ -81,6 +81,9 @@
     "karma": "*",
     "karma-jasmine": "*"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "release": {
     "analyzeCommits": {
       "path": "sr-commit-analyzer",
