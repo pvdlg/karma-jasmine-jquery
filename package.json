@@ -77,7 +77,8 @@
   "main": "lib/index.js",
   "nyc": {
     "include": [
-      "lib/*.js"
+      "lib/*.js",
+      "!lib/*.bundle.js"
     ]
   },
   "peerDependencies": {
