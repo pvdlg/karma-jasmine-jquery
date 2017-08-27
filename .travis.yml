@@ -6,9 +6,6 @@ node_js:
 os:
   - linux
   - osx
-cache:
-  directories:
-    - node_modules
 branches:
   only:
     - master
@@ -17,14 +14,8 @@ git:
   depth: 999
 before_install:
   - if [[ `npm -v` < 5* ]]; then npm install -g npm@5; fi
-  - npm install -g greenkeeper-lockfile@1
-before_script:
-  - npm prune
-  - greenkeeper-lockfile-update
 script:
   - npm run test
-after_script:
-  - greenkeeper-lockfile-upload
 env:
   - BUILD_LEADER_ID=7
 jobs:
@@ -32,14 +23,7 @@ jobs:
     - stage: release
       node_js: 8
       os: linux
-      before_install:
-        - npm install -g greenkeeper-lockfile@1
-      before_script: 
-        - npm prune
-        - greenkeeper-lockfile-update
       script: npm run test
-      after_script:
-        - greenkeeper-lockfile-upload
       after_success: 
         - if [ -n "${CODECOV_TOKEN:-}" ]; then npm run codecov; fi
         - npm run semantic-release
