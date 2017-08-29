@@ -75,10 +75,19 @@
   "license": "MIT",
   "main": "lib/index.js",
   "nyc": {
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
     "include": [
       "lib/*.js",
       "!lib/*.bundle.js"
-    ]
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "all": true
   },
   "peerDependencies": {
     "jasmine-core": "*",
@@ -110,6 +119,7 @@
     "codecov": "codecov",
     "commitmsg": "commitlint -e",
     "compile": "rimraf lib && babel src --only index.js --source-maps --out-dir lib && rollup -c build/rollup.config.js",
+    "coverage": "nyc check-coverage",
     "lint": "eslint src test package.json",
     "postcheckout": "yarn install || (rimraf && npm install)",
     "precommit": "npm run compile && npm run lint",
@@ -118,6 +128,6 @@
     "prepush": "ava -v",
     "pretest": "npm run clean && npm run compile && npm run lint",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "test": "nyc --all ava -v && nyc report --reporter=lcov"
+    "test": "nyc ava -v"
   }
 }
