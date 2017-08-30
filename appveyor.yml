@@ -11,7 +11,7 @@ branches:
 install:
   - ps: Install-Product node $env:nodejs_version
   - IF %nodejs_version% LSS 5 npm -g install npm@5
-  - npm install
+  - appveyor-retry npm install
 platform:
   - x86
   - x64
