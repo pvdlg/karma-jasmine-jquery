@@ -40,7 +40,7 @@
     "jasmine-jquery": "^2.1.1",
     "jquery": "^3.2.1",
     "karma": "^1.7.0",
-    "karma-babel-preprocessor": "^6.0.1",
+    "karma-babel-preprocessor": "^7.0.0",
     "karma-jasmine": "^1.1.0",
     "karma-jquery": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
