@@ -4,7 +4,7 @@ import karmaJasmine from 'karma-jasmine';
 /**
  * Karma framework function.
  * Call the `karma-jasmine` module if corresponding files are not already and included and add the jquery + jasmine-jquery bundle to the Karma files (after the `karma-jasmine` files in present, in first position otherwise).
- * 
+ *
  * @method framework
  * @param {Array<string>} files list of current Karma files.
  */

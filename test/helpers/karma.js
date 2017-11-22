@@ -4,7 +4,7 @@ import karmaJasmineJQuery from '../../lib/index';
 
 /**
  * Base Karma configuration tu run plugin.
- * 
+ *
  * @type {Object}
  */
 const KARMA_CONFIG = {
@@ -41,7 +41,7 @@ const KARMA_CONFIG = {
  * - Base Karma configuration {@link KARMA_CONFIG}
  * - Jasmine JS test file in `fixtures`
  * - Frameworks in `frameworks`
- * 
+ *
  * @method run
  * @param {string|Array<string>} fixtures path of the Jasmine test files to run.
  * @param {string|Array<string>}  frameworks Karma frameworks to include in the run.
