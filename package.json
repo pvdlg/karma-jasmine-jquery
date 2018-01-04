@@ -42,9 +42,7 @@
     "rollup-plugin-commonjs": "^8.2.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-re": "^1.0.6",
-    "semantic-release": "^8.0.0",
-    "sr-commit-analyzer": "^2.0.2",
-    "sr-release-notes-generator": "^1.1.2"
+    "semantic-release": "^12.0.0"
   },
   "engines": {
     "node": ">=4"
@@ -90,12 +88,10 @@
   },
   "release": {
     "analyzeCommits": {
-      "path": "sr-commit-analyzer",
       "preset": "metahub",
       "releaseRules": "conventional-changelog-metahub/release-rules"
     },
     "generateNotes": {
-      "path": "sr-release-notes-generator",
       "preset": "metahub"
     }
   },
@@ -112,7 +108,7 @@
     "prepare": "npm run compile",
     "prepublishOnly": "npm run compile",
     "pretest": "npm run clean && npm run compile && npm run lint",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "test": "nyc ava -v"
   }
 }
