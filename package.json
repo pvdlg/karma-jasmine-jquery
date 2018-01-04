@@ -3,6 +3,18 @@
   "description": "A Karma plugin for jasmine-jquery",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "4"
+          }
+        }
+      ]
+    ]
+  },
   "bugs": {
     "url": "https://github.com/vanduynslagerp/karma-jasmine-jquery/issues"
   },
@@ -71,6 +83,12 @@
     "karma": "*",
     "karma-jasmine": "*"
   },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -97,12 +115,6 @@
     "semantic-release": "semantic-release",
     "test": "nyc ava -v"
   },
-  "prettier": {
-  "printWidth": 120,
-  "singleQuote": true,
-  "bracketSpacing": false,
-  "trailingComma": "es5"
-},
   "xo": {
     "extends": [
       "plugin:prettier/recommended"
