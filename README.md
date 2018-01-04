@@ -11,7 +11,6 @@ A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 
 [![Travis](https://img.shields.io/travis/vanduynslagerp/karma-jasmine-jquery.svg)](https://travis-ci.org/vanduynslagerp/karma-jasmine-jquery)
 [![AppVeyor](https://img.shields.io/appveyor/ci/vanduynslagerp/karma-jasmine-jquery.svg)](https://ci.appveyor.com/project/vanduynslagerp/karma-jasmine-jquery)
-[![Code Climate](https://img.shields.io/codeclimate/github/vanduynslagerp/karma-jasmine-jquery.svg)](https://codeclimate.com/github/vanduynslagerp/karma-jasmine-jquery)
 [![Codecov](https://img.shields.io/codecov/c/github/vanduynslagerp/karma-jasmine-jquery.svg)](https://codecov.io/gh/vanduynslagerp/karma-jasmine-jquery)
 
 ## Installation
@@ -72,7 +71,7 @@ describe('Jasmine tests with Jasmine-jQuery and Karma-jQuery', () => {
     expect($.fn.jquery).toBe('1.8.3');
     $.fn.jquery // 1.8.3 => version installed by Karma-jQuery
     jQuery.fn.jquery // 1.8.3 => version installed by Karma-jQuery
-    
+
     expect($j.fn.jquery).toBe('3.2.1');
     $j.fn.jquery // 3.2.1 => version installed by @metahub/karma-jasmine-jquery
     jasmineJQuery.fn.jquery // 3.2.1 => version installed by @metahub/karma-jasmine-jquery
