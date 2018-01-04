@@ -2,18 +2,18 @@
 
 A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 
-[![Travis](https://img.shields.io/travis/vanduynslagerp/karma-jasmine-jquery.svg)](https://travis-ci.org/vanduynslagerp/karma-jasmine-jquery)
-[![AppVeyor](https://img.shields.io/appveyor/ci/vanduynslagerp/karma-jasmine-jquery.svg)](https://ci.appveyor.com/project/vanduynslagerp/karma-jasmine-jquery)
-[![Codecov](https://img.shields.io/codecov/c/github/vanduynslagerp/karma-jasmine-jquery.svg)](https://codecov.io/gh/vanduynslagerp/karma-jasmine-jquery)
-[![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/karma-jasmine-jquery.svg)](https://greenkeeper.io/)
-[![license](https://img.shields.io/github/license/vanduynslagerp/karma-jasmine-jquery.svg)](https://github.com/vanduynslagerp/karma-jasmine-jquery/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/pvdlg/karma-jasmine-jquery.svg)](https://travis-ci.org/pvdlg/karma-jasmine-jquery)
+[![AppVeyor](https://img.shields.io/appveyor/ci/pvdlg/karma-jasmine-jquery.svg)](https://ci.appveyor.com/project/pvdlg/karma-jasmine-jquery)
+[![Codecov](https://img.shields.io/codecov/c/github/pvdlg/karma-jasmine-jquery.svg)](https://codecov.io/gh/pvdlg/karma-jasmine-jquery)
+[![Greenkeeper badge](https://badges.greenkeeper.io/pvdlg/karma-jasmine-jquery.svg)](https://greenkeeper.io/)
+[![license](https://img.shields.io/github/license/pvdlg/karma-jasmine-jquery.svg)](https://github.com/pvdlg/karma-jasmine-jquery/blob/master/LICENSE)
 
 ## Installation
 
 ```bash
 npm install karma jasmine-core karma-jasmine jasmine-jquery @metahub/karma-jasmine-jquery --save-dev
 ```
-**_Note: `@metahub/karma-jasmine-jquery` depends on [Jasmine](https://github.com/jasmine/jasmine), [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine), and [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) but they are not bundled, just defined as [peer-dependencies](https://nodejs.org/en/blog/npm/peer-dependencies). This allow you to use any version independently of `@metahub/karma-jasmine-jquery`._**
+**Note: `@metahub/karma-jasmine-jquery` depends on [Jasmine](https://github.com/jasmine/jasmine), [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine), and [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) but they are not bundled, just defined as [peer-dependencies](https://nodejs.org/en/blog/npm/peer-dependencies). This allow you to use any version independently of `@metahub/karma-jasmine-jquery`.**
 
 ## Configuration
 
@@ -27,9 +27,9 @@ module.exports = function(config) {
   });
 };
 ```
-**_Note: Karma can auto-load plugins named `karma-*` (see [plugins](http://karma-runner.github.io/1.0/config/plugins.html)). Unfortunatly it doesn't work with [scoped packages](https://docs.npmjs.com/misc/scope), therefore `@metahub/karma-jasmine-jquery` has to be explicitly added to the `plugins` configuration. In order to continue to automatically load other plugins you can add `karma-*` to the `plugins` configuration._**
+**Note: Karma can auto-load plugins named `karma-*` (see [plugins](http://karma-runner.github.io/1.0/config/plugins.html)). Unfortunatly it doesn't work with [scoped packages](https://docs.npmjs.com/misc/scope), therefore `@metahub/karma-jasmine-jquery` has to be explicitly added to the `plugins` configuration. In order to continue to automatically load other plugins you can add `karma-*` to the `plugins` configuration.**
 
-**_Note: `@metahub/karma-jasmine-jquery` will automatically import the necesary files from [jQuery](https://github.com/jquery/jquery), [Jasmine](https://github.com/jasmine/jasmine) and [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine). No need to add them to `plugins` or `frameworks`._**
+**Note: `@metahub/karma-jasmine-jquery` will automatically import the necesary files from [jQuery](https://github.com/jquery/jquery), [Jasmine](https://github.com/jasmine/jasmine) and [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine). No need to add them to `plugins` or `frameworks`.**
 
 In your [Jasmine](https://github.com/jasmine/jasmine) tests, [jQuery](https://github.com/jquery/jquery) will be accessible with `$` or `jQuery`:
 ```js

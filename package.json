@@ -2,7 +2,7 @@
   "name": "@metahub/karma-jasmine-jquery",
   "description": "A Karma plugin for jasmine-jquery",
   "version": "0.0.0-development",
-  "author": "Pierre Vanduynslager",
+  "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
   "babel": {
     "presets": [
       [
@@ -16,7 +16,7 @@
     ]
   },
   "bugs": {
-    "url": "https://github.com/vanduynslagerp/karma-jasmine-jquery/issues"
+    "url": "https://github.com/pvdlg/karma-jasmine-jquery/issues"
   },
   "devDependencies": {
     "ava": "^0.24.0",
@@ -53,7 +53,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "https://github.com/vanduynslagerp/karma-jasmine-jquery#readme",
+  "homepage": "https://github.com/pvdlg/karma-jasmine-jquery#readme",
   "keywords": [
     "jasmine",
     "jasmine-jquery",
@@ -103,7 +103,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vanduynslagerp/karma-jasmine-jquery.git"
+    "url": "git+https://github.com/pvdlg/karma-jasmine-jquery.git"
   },
   "scripts": {
     "codecov": "codecov -f coverage/coverage-final.json",
