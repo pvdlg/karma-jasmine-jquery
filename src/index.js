@@ -9,29 +9,29 @@ import karmaJasmine from 'karma-jasmine';
  * @param {Array<string>} files list of current Karma files.
  */
 function framework(files) {
-  let insertIndex = 0;
+	let insertIndex = 0;
 
-  for (let len = files.length, i = len - 1; i >= 0; i--) {
-    if (files[i].pattern.search(/karma-jasmine(\/|\\)lib(\/|\\).*\.js/) !== -1) {
-      insertIndex = i + 1;
-      break;
-    }
-  }
+	for (let len = files.length, i = len - 1; i >= 0; i--) {
+		if (files[i].pattern.search(/karma-jasmine(\/|\\)lib(\/|\\).*\.js/) !== -1) {
+			insertIndex = i + 1;
+			break;
+		}
+	}
 
-  files.splice(insertIndex, 0, {
-    pattern: path.resolve(require.resolve('./jasmine-jquery.bundle.js')),
-    included: true,
-    served: true,
-    watched: false,
-  });
+	files.splice(insertIndex, 0, {
+		pattern: path.resolve(require.resolve('./jasmine-jquery.bundle.js')),
+		included: true,
+		served: true,
+		watched: false,
+	});
 
-  if (insertIndex === 0) {
-    karmaJasmine['framework:jasmine'][1](files);
-  }
+	if (insertIndex === 0) {
+		karmaJasmine['framework:jasmine'][1](files);
+	}
 }
 
 framework.$inject = ['config.files'];
 
 module.exports = {
-  'framework:jasmine-jquery': ['factory', framework],
+	'framework:jasmine-jquery': ['factory', framework],
 };
