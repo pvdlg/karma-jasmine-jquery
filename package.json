@@ -42,7 +42,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-re": "^1.0.6",
     "semantic-release": "^15.0.0",
-    "xo": "^0.20.0"
+    "xo": "^0.21.0"
   },
   "engines": {
     "node": ">=6"
@@ -81,7 +81,8 @@
     "karma-jasmine": "*"
   },
   "prettier": {
-    "printWidth": 120
+    "printWidth": 120,
+    "trailingComma": "es5"
   },
   "publishConfig": {
     "access": "public"
