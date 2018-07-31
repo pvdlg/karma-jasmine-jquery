@@ -2,6 +2,7 @@
 
 A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 
+[![npmjs](https://img.shields.io/npm/v/@metahub/karma-jasmine-jquery.svg)](https://www.npmjs.com/package/@metahub/karma-jasmine-jquery)
 [![Travis](https://img.shields.io/travis/pvdlg/karma-jasmine-jquery.svg)](https://travis-ci.org/pvdlg/karma-jasmine-jquery)
 [![AppVeyor](https://img.shields.io/appveyor/ci/pvdlg/karma-jasmine-jquery.svg)](https://ci.appveyor.com/project/pvdlg/karma-jasmine-jquery)
 [![Codecov](https://img.shields.io/codecov/c/github/pvdlg/karma-jasmine-jquery.svg)](https://codecov.io/gh/pvdlg/karma-jasmine-jquery)
