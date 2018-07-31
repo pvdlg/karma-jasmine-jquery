@@ -1,4 +1,4 @@
-# **karma-jasmine-jquery**
+# karma-jasmine-jquery
 
 A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 
@@ -13,23 +13,38 @@ A Karma plugin for [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery).
 ```bash
 npm install karma jasmine-core karma-jasmine jasmine-jquery @metahub/karma-jasmine-jquery --save-dev
 ```
-**Note: `@metahub/karma-jasmine-jquery` depends on [Jasmine](https://github.com/jasmine/jasmine), [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine), and [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) but they are not bundled, just defined as [peer-dependencies](https://nodejs.org/en/blog/npm/peer-dependencies). This allow you to use any version independently of `@metahub/karma-jasmine-jquery`.**
+**Note**: `@metahub/karma-jasmine-jquery` depends on [Jasmine](https://github.com/jasmine/jasmine), [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine), and [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) but they are not bundled, just defined as [peer-dependencies](https://nodejs.org/en/blog/npm/peer-dependencies). This allow you to use any version independently of `@metahub/karma-jasmine-jquery`.
 
-## Configuration
+## Migrating from karma-jasmine-jquery
 
-### Standard
+This package offers similar functionality to the [karma-jasmine-jquery](https://www.npmjs.com/package/karma-jasmine-jquery) package.
+
+To migrate to this package, you need to use this entry in your `package.json`:
+
+```js
+    "@metahub/karma-jasmine-jquery": "^1.1.2",
+```
+
+You then need to add a `plugins` section to your Karma configuration, usually in `karma.conf.js`, if you don't have one.  If you have one, then you need to modify the existing `plugins` section and enable this plugin, which see below.
+
+## Standard configuration
+
+Use the following Karma configuration:
 
 ```js
 module.exports = function(config) {
   config.set({
-    plugins: ['@metahub/karma-jasmine-jquery', 'karma-*'],
+    plugins: [
+      '@metahub/karma-jasmine-jquery',
+      'karma-*'
+    ],
     frameworks: ['jasmine-jquery'],
   });
 };
 ```
-**Note: Karma can auto-load plugins named `karma-*` (see [plugins](http://karma-runner.github.io/1.0/config/plugins.html)). Unfortunatly it doesn't work with [scoped packages](https://docs.npmjs.com/misc/scope), therefore `@metahub/karma-jasmine-jquery` has to be explicitly added to the `plugins` configuration. In order to continue to automatically load other plugins you can add `karma-*` to the `plugins` configuration.**
+**Note**: Karma can auto-load plugins named `karma-*` (see [plugins](http://karma-runner.github.io/1.0/config/plugins.html)). Unfortunatly it doesn't work with [scoped packages](https://docs.npmjs.com/misc/scope), therefore `@metahub/karma-jasmine-jquery` has to be explicitly added to the `plugins` configuration. In order to continue to automatically load other plugins you can add `karma-*` to the `plugins` configuration.
 
-**Note: `@metahub/karma-jasmine-jquery` will automatically import the necesary files from [jQuery](https://github.com/jquery/jquery), [Jasmine](https://github.com/jasmine/jasmine) and [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine). No need to add them to `plugins` or `frameworks`.**
+**Note**: `@metahub/karma-jasmine-jquery` will automatically import the necesary files from [jQuery](https://github.com/jquery/jquery), [Jasmine](https://github.com/jasmine/jasmine) and [Karma-Jasmine](https://github.com/karma-runner/karma-jasmine). No need to add them to `plugins` or `frameworks`.
 
 In your [Jasmine](https://github.com/jasmine/jasmine) tests, [jQuery](https://github.com/jquery/jquery) will be accessible with `$` or `jQuery`:
 ```js
@@ -42,8 +57,9 @@ describe('Jasmine tests with Jasmine-jQuery', () => {
 });
 ```
 
-### With a custom jQuery version
-`@metahub/karma-jasmine-jquery` uses a recent version of [jQuery](https://github.com/jquery/jquery) but it might be desirable to use the specific version of [jQuery](https://github.com/jquery/jquery) used in your application for executing the [Jasmine](https://github.com/jasmine/jasmine) tests.
+## Using a custom jQuery version
+
+While `@metahub/karma-jasmine-jquery` uses a recent version of [jQuery](https://github.com/jquery/jquery), it might be desirable to use the specific version of [jQuery](https://github.com/jquery/jquery) used in your application for executing the [Jasmine](https://github.com/jasmine/jasmine) tests.
 
 In that case you can use [Karma-jQuery](https://github.com/scf2k/karma-jquery):
 ```bash
