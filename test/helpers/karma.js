@@ -1,6 +1,6 @@
 import pEvent from 'p-event';
 import {Server, constants} from 'karma';
-import karmaJasmineJQuery from '../../lib';
+import karmaJasmineJQuery from '../..';
 
 /**
  * Base Karma configuration tu run plugin.
@@ -12,7 +12,7 @@ const KARMA_CONFIG = {
 	preprocessors: {
 		'test/fixtures/**/*.test.js': ['babel'],
 	},
-	babelPreprocessor: {options: {babelrc: false, presets: ['es2015'], sourceMap: 'inline'}},
+	babelPreprocessor: {options: {babelrc: false, presets: ['@babel/preset-env'], sourceMap: 'inline'}},
 	colors: true,
 	logLevel: constants.LOG_DISABLE,
 	browsers: ['PhantomJS'],
@@ -47,7 +47,7 @@ const KARMA_CONFIG = {
  * @param {string|Array<string>}  frameworks Karma frameworks to include in the run.
  * @return {Promise<KarmaOutput>} A `Promise` that resolve to the Karma execution results.
  */
-export default function run(fixtures, frameworks) {
+export default async function run(fixtures, frameworks) {
 	const server = new Server(
 		Object.assign(KARMA_CONFIG, {
 			files: Array.isArray(fixtures) ? fixtures : [fixtures],
@@ -55,16 +55,21 @@ export default function run(fixtures, frameworks) {
 		}),
 		() => 0
 	);
-	/* eslint-disable unicorn/catch-error-name */
-	const promise = pEvent(server, 'run_complete', {multiArgs: true, rejectionEvents: ['browser_error']})
-		.then(result => result[1])
-		.catch(result => {
-			const {success, failed, error, disconnected} = result[0].lastResult;
 
-			return {success, failed, error, disconnected, exitCode: 1, errMsg: result[1]};
+	server.start();
+	try {
+		const [, result] = await pEvent(server, 'run_complete', {
+			multiArgs: true,
+			timeout: 30000,
+			rejectionEvents: ['browser_error'],
 		});
 
-	/* eslint-enable unicorn/catch-error-name */
-	server.start();
-	return promise;
+		return result;
+	} catch (error) {
+		const {
+			lastResult: {success, failed, error: err, disconnected},
+		} = error;
+
+		return {success, failed, error: err, disconnected, exitCode: 1};
+	}
 }
