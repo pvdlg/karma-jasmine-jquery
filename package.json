@@ -13,10 +13,10 @@
   "babel": {
     "presets": [
       [
-        "env",
+        "@babel/preset-env",
         {
           "targets": {
-            "node": "6"
+            "node": "8.16"
           }
         }
       ]
@@ -26,10 +26,9 @@
     "url": "https://github.com/pvdlg/karma-jasmine-jquery/issues"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "ava": "^1.0.1",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
     "codecov": "^3.0.0",
     "conventional-changelog-metahub": "^2.0.1",
     "eslint-plugin-sort-class-members": "^1.2.0",
@@ -37,7 +36,7 @@
     "jasmine-jquery": "^2.1.1",
     "jquery": "^3.2.1",
     "karma": "^3.0.0",
-    "karma-babel-preprocessor": "^7.0.0",
+    "karma-babel-preprocessor": "^8.0.0",
     "karma-jasmine": "^2.0.0",
     "karma-jquery": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
@@ -52,9 +51,10 @@
     "xo": "^0.23.0"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8.16"
   },
   "files": [
+    "index.js",
     "lib"
   ],
   "homepage": "https://github.com/pvdlg/karma-jasmine-jquery#readme",
@@ -68,9 +68,10 @@
     "karma-plugin"
   ],
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "index.js",
   "nyc": {
     "include": [
+      "index.js",
       "lib/*.js",
       "!lib/*.bundle.js"
     ],
@@ -109,7 +110,7 @@
   },
   "scripts": {
     "codecov": "codecov -f coverage/coverage-final.json",
-    "compile": "rimraf lib && babel src --only index.js --source-maps --out-dir lib && rollup -c build/rollup.config.js",
+    "compile": "rimraf lib && rollup -c build/rollup.config.js",
     "lint": "xo",
     "prepare": "npm run compile",
     "prepublishOnly": "npm run compile",

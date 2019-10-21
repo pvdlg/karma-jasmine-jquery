@@ -1,5 +1,5 @@
-import path from 'path';
-import karmaJasmine from 'karma-jasmine';
+const path = require('path');
+const karmaJasmine = require('karma-jasmine');
 
 /**
  * Karma framework function.
@@ -19,7 +19,7 @@ function framework(files) {
 	}
 
 	files.splice(insertIndex, 0, {
-		pattern: path.resolve(require.resolve('./jasmine-jquery.bundle.js')),
+		pattern: path.resolve(require.resolve('./lib/jasmine-jquery.bundle.js')),
 		included: true,
 		served: true,
 		watched: false,
