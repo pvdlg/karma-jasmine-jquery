@@ -3,25 +3,6 @@
   "description": "A Karma plugin for jasmine-jquery",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
-  "ava": {
-    "babel": {
-      "testOptions": {
-        "babelrc": false
-      }
-    }
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "8.16"
-          }
-        }
-      ]
-    ]
-  },
   "bugs": {
     "url": "https://github.com/pvdlg/karma-jasmine-jquery/issues"
   },
