@@ -1,8 +1,7 @@
-/* eslint-disable no-magic-numbers */
 import test from 'ava';
 import run from './helpers/karma';
 
-test.only('Jasmine-JQuery should be loaded', async t => {
+test('Jasmine-JQuery should be loaded', async t => {
 	const fixture = 'test/fixtures/jasmine-jquery.test.js';
 	const {success, failed, error, disconnected, exitCode} = await run(fixture, 'jasmine-jquery');
 

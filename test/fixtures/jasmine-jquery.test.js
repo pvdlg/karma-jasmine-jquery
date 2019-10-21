@@ -6,16 +6,16 @@ describe('Loading Jasmine-JQuery', () => {
 		expect(window.setFixtures).toEqual(jasmine.any(Function));
 		expect(window.appendSetFixtures).toEqual(jasmine.any(Function));
 		window.setFixtures('<div id="fixture" class="fixture-class">42</div>');
-		expect(document.getElementById('fixture')).toBeTruthy();
+		expect(document.querySelector('#fixture')).toBeTruthy();
 		expect(window.readFixtures).toEqual(jasmine.any(Function));
 	});
 
 	it('shoud expose matchers', () => {
 		expect(window.jasmine).toBeDefined();
 		window.setFixtures('<div id="fixture" class="fixture-class">42</div>');
-		expect(document.getElementById('fixture')).toExist();
-		expect(document.getElementById('fixture')).toHaveClass('fixture-class');
-		expect(document.getElementById('fixture')).toHaveText('42');
+		expect(document.querySelector('#fixture')).toExist();
+		expect(document.querySelector('#fixture')).toHaveClass('fixture-class');
+		expect(document.querySelector('#fixture')).toHaveText('42');
 		expect(document.body).toBeInDOM();
 	});
 
