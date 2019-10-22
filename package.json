@@ -21,7 +21,7 @@
     "karma-jasmine": "^2.0.0",
     "karma-jquery": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
-    "nyc": "^13.1.0",
+    "nyc": "^14.1.1",
     "p-event": "^4.1.0",
     "rimraf": "^2.6.1",
     "rollup": "^1.0.0",
