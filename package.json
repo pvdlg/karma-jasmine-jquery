@@ -3,13 +3,21 @@
   "description": "A Karma plugin for jasmine-jquery",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
+  "ava": {
+    "helpers": [
+      "test/helpers/**/*"
+    ],
+    "files": [
+      "test/*.test.js"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/pvdlg/karma-jasmine-jquery/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "ava": "^1.0.1",
+    "ava": "^2.4.0",
     "codecov": "^3.0.0",
     "conventional-changelog-metahub": "^3.0.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
