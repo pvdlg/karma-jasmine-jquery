@@ -1,5 +1,5 @@
-import test from 'ava';
-import run from './helpers/karma';
+const test = require('ava');
+const run = require('./helpers/karma');
 
 test('Jasmine-JQuery should be loaded', async t => {
 	const fixture = 'test/fixtures/jasmine-jquery.test.js';
