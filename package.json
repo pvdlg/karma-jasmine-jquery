@@ -4,9 +4,6 @@
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
   "ava": {
-    "helpers": [
-      "test/helpers/**/*"
-    ],
     "files": [
       "test/*.test.js"
     ]
@@ -17,7 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "ava": "^2.4.0",
+    "ava": "^3.1.0",
     "codecov": "^3.0.0",
     "conventional-changelog-metahub": "^4.0.0",
     "eslint-plugin-sort-class-members": "^1.2.0",

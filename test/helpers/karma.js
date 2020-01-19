@@ -1,6 +1,6 @@
-import pEvent from 'p-event';
-import {Server, constants} from 'karma';
-import karmaJasmineJQuery from '../..';
+const pEvent = require('p-event');
+const {Server, constants} = require('karma');
+const karmaJasmineJQuery = require('../..');
 
 /**
  * Base Karma configuration tu run plugin.
@@ -47,7 +47,7 @@ const KARMA_CONFIG = {
  * @param {string|Array<string>}  frameworks Karma frameworks to include in the run.
  * @return {Promise<KarmaOutput>} A `Promise` that resolve to the Karma execution results.
  */
-export default async function run(fixtures, frameworks) {
+async function run(fixtures, frameworks) {
 	const server = new Server(
 		Object.assign(KARMA_CONFIG, {
 			files: Array.isArray(fixtures) ? fixtures : [fixtures],
@@ -73,3 +73,5 @@ export default async function run(fixtures, frameworks) {
 		return {success, failed, error: err, disconnected, exitCode: 1};
 	}
 }
+
+module.exports = run;
