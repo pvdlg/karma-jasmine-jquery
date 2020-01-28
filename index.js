@@ -1,6 +1,8 @@
 const path = require('path');
 const karmaJasmine = require('karma-jasmine');
 
+/* eslint prefer-named-capture-group: "off" */
+
 /**
  * Karma framework function.
  * Call the `karma-jasmine` module if corresponding files are not already and included and add the jquery + jasmine-jquery bundle to the Karma files (after the `karma-jasmine` files in present, in first position otherwise).
