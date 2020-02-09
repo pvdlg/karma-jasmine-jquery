@@ -14,7 +14,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "ava": "^3.1.0",
+    "ava": "^3.3.0",
     "codecov": "^3.0.0",
     "conventional-changelog-metahub": "^4.0.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
